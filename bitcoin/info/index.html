@@ -1,0 +1,74 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+      <title>TP Finance Cedric et Maxime</title>
+  </head>
+  
+  <body>
+
+ 	 <script type="text/javascript">
+  		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		        var myObj = this.responseText;
+		        var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
+		        document.getElementById("blockchaininfo").innerHTML = jsonPretty;
+		    }
+		};
+		xmlhttp.open("GET", "https://api.blockcypher.com/v1/btc/main", true); //https://bitcoin.mubiz.com/blockchaininfo
+		xmlhttp.send();
+  	</script>
+  	 	 <script type="text/javascript">
+  		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		        var myObj = this.responseText;
+		        var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
+		        document.getElementById("mininginfo").innerHTML = jsonPretty;
+		    }
+		};
+		xmlhttp.open("GET", " https://bitcoin.mubiz.com/mininginfo", true);
+		xmlhttp.send();
+  	</script>
+  	 	 <script type="text/javascript">
+  		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		        var myObj = this.responseText;
+		        var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
+		        document.getElementById("peerinfo").innerHTML = jsonPretty;
+		    }
+		};
+		xmlhttp.open("GET", " https://bitcoin.mubiz.com/peerinfo ", true);
+		xmlhttp.send();
+  	</script>
+
+
+<a href="../explorer">acceder au formulaire</a> <a href="../block">info block</a>
+
+  	<div class="row">
+  	<p>J'ai changé d'API pour la partie BlockChainInfo, c'est donc la seule qui fonctionne pour cette page</p>
+  		<h3>BlochainInfo</h3>
+	    	<pre>
+  				<div style="margin:20px; margin-top:5px"><div class="quotetitle"><b>Spoiler:</b> <input type="button" value="Afficher" style="width:45px;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';        this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" /></div><div class="quotecontent"><div style="display: none;"><code id="blockchaininfo" class="json kljs"></code></div></div></div>
+
+
+	    	</pre>
+
+	</div>
+	  	<div class="row">
+	  	<h3>MiningInfo</h3>
+	    	<pre>
+	    		<div style="margin:20px; margin-top:5px"><div class="quotetitle"><b>Spoiler:</b> <input type="button" value="Afficher" style="width:45px;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';        this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" /></div><div class="quotecontent"><div style="display: none;"><code id="mininginfo" class="json kljs"></code></code></div></div></div>
+	    	</pre>
+	</div>
+	  	<div class="row">
+	  	<h3>PeerInfo</h3>
+	    	<pre>
+	    		<div style="margin:20px; margin-top:5px"><div class="quotetitle"><b>Spoiler:</b> <input type="button" value="Afficher" style="width:45px;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';        this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" /></div><div class="quotecontent"><div style="display: none;"><code id="peerinfo" class="json kljs"></code></code></div></div></div>
+	        	
+	    	</pre>
+	</div>
+	<a href="../../">Retour à la page principale</a>
+  </body>
+ </html>

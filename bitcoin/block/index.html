@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<title>TP Finance Cedric et Maxime</title>
+
+
+<!-- BOOTSTRAP -->
+
+<!-- <link rel="stylesheet" media="all" type="text/css"
+	href="../css/bootstrap.css" /> -->
+
+<!-- Fonts Awesome : Pour les icones -->
+
+<!-- BITCOIN -->
+<script type="text/javascript" src="../../js/bitcoin_dernier.js" defer></script>
+
+</head>
+<body>
+<a href="../info">info bitcoin</a> <a href="../explorer">acceder au formulaire</a>
+	<div class="container theme-showcase" role="main">
+		<div class="jumbotron">
+			<h1>Bitcoin</h1>
+		</div>
+	</div>
+
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-yellow">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-tasks fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_block_number"></span>
+									</h2>
+									<div>nombre de Blocks</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-tasks fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_network_hash"></span>
+									</h2>
+									<div>hash du dernier block</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-red">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-tasks fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_blocks"></span>
+									</h2>
+									<div>Numero du block en cours</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-green">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-money fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_prev"></span>
+									</h2>
+									<div>Hash du block précedent</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-money fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_prix_dollars"></span>
+									</h2>
+									<div>Prix en $ du bitcoin</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-red">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-clock-o fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_minute_entre_blocks"></span>
+									</h2>
+									<div>Minutes entre les blocks</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-green">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-signal fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_difficulty"></span>
+									</h2>
+									<div>Difficulté</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<a href="../../">Retour à la page principale</a>
+</body>
+</html>
